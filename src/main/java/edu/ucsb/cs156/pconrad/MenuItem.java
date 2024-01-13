@@ -35,7 +35,7 @@ public class MenuItem {
 
     public String getPrice() {
 
-        return "$" + priceInCents / 100 + "." + priceInCents % 100;
+        return "$" + priceInCents / 100 ;
     }
 
     /**
