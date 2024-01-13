@@ -16,26 +16,48 @@ public class MenuItem {
 
 
     public MenuItem(String name, int priceInCents, String category) {
+        // stub
         this.name = name;
         this.priceInCents = priceInCents;
         this.category = category;
     }
 
+    /**
+     * Returns the price, formatted as a string with a $.
+     * For example "$0.99", "$10.99", or "$3.50"
+     */
 
     public String getPrice() {
-        return "$" + princeInCents / 100 + "." + princeInCents % 100;
+        return "$" + priceInCents / 100 + "." + priceInCents % 100;
     }
+
+    /**
+     * Returns the price, formatted as a string with a $,
+     * right justified in a field with the specified width.
+     * For example "$0.99", "$10.99", or "$3.50".
+     * <p>
+     * If the width is too small, throws TooNarrowException
+     *
+     * @param width width of returned string
+     */
 
     public String getPrice(int width) {
         String price = getPrice();
-        int L = price.length;
+        int l = price.length();
         StringBuffer sb = new StringBuffer();
-        for(int i = 0; i < width - L; i++;){
-                sb.sppend(" ");
-            }
+        for (int i = 0; i < width - l; i++) {
+            sb.append(" ");
+        }
         if (width < l) throw new TooNarrowException();
-        else return sb.toString()+"$" + price.substring(1);
+        else return  sb.toString()+"$" + price.substring(1);
     }
+
+    /**
+     * return a string in csv format, in the order name,price,cateogry.
+     * For example <code>Small Poke Bowl,1049,Poke Bowls</code>
+     *
+     * @return string in csv format
+     */
 
     @Override
     public String toString() {
