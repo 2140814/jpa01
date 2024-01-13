@@ -37,13 +37,6 @@ public class MenuItem {
         else return sb.toString()+"$" + price.substring(1);
     }
 
-    /**
-     * return a string in csv format, in the order name,price,cateogry.
-     * For example <code>Small Poke Bowl,1049,Poke Bowls</code>
-     *
-     * @return string in csv format
-     */
-
     @Override
     public String toString() {
         return this.name + "," + priceInCents + "," + category;
