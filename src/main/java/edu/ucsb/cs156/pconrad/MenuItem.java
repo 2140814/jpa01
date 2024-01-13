@@ -16,30 +16,25 @@ public class MenuItem {
 
 
     public MenuItem(String name, int priceInCents, String category) {
-        // stub
+        this.name = name;
+        this.priceInCents = priceInCents;
+        this.category = category;
     }
 
-    /**
-     * Returns the price, formatted as a string with a $.
-     * For example "$0.99", "$10.99", or "$3.50"
-     */
 
     public String getPrice() {
-        return "stub";
+        return "$" + princeInCents / 100 + "." + princeInCents % 100;
     }
 
-    /**
-     * Returns the price, formatted as a string with a $,
-     * right justified in a field with the specified width.
-     * For example "$0.99", "$10.99", or "$3.50".
-     * <p>
-     * If the width is too small, throws TooNarrowException
-     *
-     * @param width width of returned string
-     */
-
     public String getPrice(int width) {
-        return "stub";
+        String price = getPrice();
+        int L = price.length;
+        StringBuffer sb = new StringBuffer();
+        for(int i = 1; i < width - L; i++;){
+                sb.sppend(" ");
+            }
+        if (width < l) throw new TooNarrowException();
+        else return sb.toString()+"$" + price.substring(1);
     }
 
     /**
@@ -51,7 +46,7 @@ public class MenuItem {
 
     @Override
     public String toString() {
-        return "stub";
+        return this.name + "," + priceInCents + "," + category;
     }
 
 }
