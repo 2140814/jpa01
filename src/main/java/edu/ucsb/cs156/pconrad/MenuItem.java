@@ -21,6 +21,12 @@ public class MenuItem {
         this.priceInCents = priceInCents;
         this.category = category;
     }
+    public String getCategory(){
+        return category;
+    }
+    public String getName(){
+        return name;
+    }
 
     /**
      * Returns the price, formatted as a string with a $.
@@ -28,6 +34,7 @@ public class MenuItem {
      */
 
     public String getPrice() {
+
         return "$" + priceInCents / 100 + "." + priceInCents % 100;
     }
 
@@ -52,6 +59,9 @@ public class MenuItem {
         else return  sb.toString()+"$" + price.substring(1);
     }
 
+    public int getPriceInCents(){
+        return priceInCents % 100;
+    }
     /**
      * return a string in csv format, in the order name,price,cateogry.
      * For example <code>Small Poke Bowl,1049,Poke Bowls</code>
