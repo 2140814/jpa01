@@ -60,7 +60,7 @@ public class MenuItem {
     }
 
     public int getPriceInCents(){
-        return priceInCents % 100;
+        return priceInCents;
     }
     /**
      * return a string in csv format, in the order name,price,cateogry.
