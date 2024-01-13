@@ -30,7 +30,7 @@ public class MenuItem {
         String price = getPrice();
         int L = price.length;
         StringBuffer sb = new StringBuffer();
-        for(int i = 1; i < width - L; i++;){
+        for(int i = 0; i < width - L; i++;){
                 sb.sppend(" ");
             }
         if (width < l) throw new TooNarrowException();
