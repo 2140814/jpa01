@@ -25,7 +25,7 @@ public class MenuItem {
         return category;
     }
     public String getName(){
-        return name;
+        return this.name;
     }
 
     /**
@@ -72,7 +72,7 @@ public class MenuItem {
 
     @Override
     public String toString() {
-        return this.name + "," + getPriceInCents() + "," + category;
+        return getName() + "," + getPriceInCents() + "," +  getCategory();
     }
 
 }
