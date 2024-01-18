@@ -22,10 +22,10 @@ public class MenuItem {
         this.category = category;
     }
     public String getCategory(){
-        return this.category;
+        return category;
     }
     public String getName(){
-        return this.name;
+        return name;
     }
 
     /**
