@@ -3,7 +3,7 @@ package edu.ucsb.cs156.pconrad.menuitem;
 public class MenuItem {
 
     private String name;
-    private long priceInCents;
+    private int priceInCents;
     private String category;
 
     /**
