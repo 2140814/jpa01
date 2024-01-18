@@ -21,12 +21,10 @@ public class MenuItem {
         this.priceInCents = priceInCents;
         this.category = category;
     }
-    public String getCategory(String category){
-        this.category = category;
+    public String getCategory(){
         return category;
     }
-    public String getName(String name){
-        this.name = name;
+    public String getName(){
         return name;
     }
 
@@ -61,8 +59,8 @@ public class MenuItem {
         else return  sb.toString()+"$" + price.substring(1);
     }
 
-    public int getPriceInCents(int priceInCents){
-        this.priceInCents = priceInCents;
+    public int getPriceInCents(){
+        
         return priceInCents;
     }
     /**
