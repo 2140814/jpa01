@@ -72,7 +72,7 @@ public class MenuItem {
 
     @Override
     public String toString() {
-        return this.name + "," + priceInCents + "," + category;
+        return this.name + "," + getPriceInCents() + "," + category;
     }
 
 }
