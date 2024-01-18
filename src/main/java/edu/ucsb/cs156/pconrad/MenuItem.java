@@ -22,9 +22,11 @@ public class MenuItem {
         this.category = category;
     }
     public String getCategory(String category){
+        this.category = category;
         return category;
     }
     public String getName(String name){
+        this.name = name;
         return name;
     }
 
@@ -60,6 +62,7 @@ public class MenuItem {
     }
 
     public int getPriceInCents(int priceInCents){
+        this.priceInCents = priceInCents;
         return priceInCents;
     }
     /**
